@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo Payment Page</h2>
+
+<button onclick="pay()">Pay Now</button>
+
+<script>
+function pay() {
+  const orderId = "demo_paid_123";
+  window.location.href = "/access.html?order_id=" + orderId;
+}
+</script>
+
+</body>
+</html>
