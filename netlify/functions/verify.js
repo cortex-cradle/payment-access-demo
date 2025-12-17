@@ -1,5 +1,5 @@
-export default async (req) => {
-  const params = req.queryStringParameters || {};
+exports.handler = async (event) => {
+  const params = event.queryStringParameters || {};
   const order_id = params.order_id;
 
   if (!order_id) {
@@ -9,6 +9,7 @@ export default async (req) => {
     };
   }
 
+  // ✅ DEMO PAID ORDERS
   const paidOrders = ["demo_paid_123"];
 
   if (paidOrders.includes(order_id)) {
